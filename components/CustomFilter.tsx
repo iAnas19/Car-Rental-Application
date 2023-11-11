@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const CustomFilter = () => {
-  return (
-    <div>CustomFilter</div>
-  )
-}
+type CustomFilterProps = {
+  title: string;
+};
 
-export default CustomFilter
+const CustomFilter: React.FC<CustomFilterProps> = ({ title }) => {
+  return <div>CustomFilter</div>;
+};
+
+export default CustomFilter;
