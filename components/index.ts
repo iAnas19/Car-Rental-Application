@@ -2,4 +2,16 @@ import Hero from "./Hero";
 import CustomButton from "./CustomButton";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-export { Navbar, Footer, Hero, CustomButton };
+import SearchBar from "./SearchBar";
+import CustomFilter from "./CustomFilter";
+import SearchManufacturer from "./SearchManufacturer";
+
+export {
+  Navbar,
+  Footer,
+  Hero,
+  CustomButton,
+  SearchBar,
+  CustomFilter,
+  SearchManufacturer,
+};
