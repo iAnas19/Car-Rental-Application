@@ -1,20 +1,5 @@
 import { MouseEventHandler } from "react";
 
-export type CustomButtonProps = {
-  title: string;
-  containerStyles?: string;
-  handleClick?: MouseEventHandler<HTMLButtonElement>;
-  btnType?: "button" | "submit";
-  textStyles?: string;
-  rightIcon?: string;
-  isDisabled?: boolean;
-};
-
-export type SearchManufacturerProps = {
-  manufacturer: string;
-  setManufacturer: (manufacturer: string) => void;
-};
-
 export type CarProps = {
   city_mpg: number;
   class: string;
@@ -28,4 +13,56 @@ export type CarProps = {
   model: string;
   transmission: string;
   year: number;
+};
+
+export type FilterProps = {
+  manufacturer?: string;
+  year?: number;
+  model?: string;
+  limit?: number;
+  fuel?: string;
+};
+
+export type HomeProps = {
+  searchParams: FilterProps;
+};
+
+export type CarCardProps = {
+  model: string;
+  make: string;
+  mpg: number;
+  transmission: string;
+  year: number;
+  drive: string;
+  cityMPG: number;
+};
+
+export type CustomButtonProps = {
+  isDisabled?: boolean;
+  btnType?: "button" | "submit";
+  containerStyles?: string;
+  textStyles?: string;
+  title: string;
+  rightIcon?: string;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
+};
+
+export type OptionProps = {
+  title: string;
+  value: string;
+};
+
+export type CustomFilterProps = {
+  title: string;
+  options: OptionProps[];
+};
+
+export type ShowMoreProps = {
+  pageNumber: number;
+  isNext: boolean;
+};
+
+export type SearchManuFacturerProps = {
+  manufacturer: string;
+  setManuFacturer: (manufacturer: string) => void;
 };

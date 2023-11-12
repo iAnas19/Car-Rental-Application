@@ -2,8 +2,8 @@ import { Fragment } from "react";
 import Image from "next/image";
 
 import { Dialog, Transition } from "@headlessui/react";
-import { generateCarImageUrl } from "@/utils";
 import { CarProps } from "@/types";
+import { generateCarImageUrl } from "@/utils";
 
 type CarDetailsProps = {
   isOpen: boolean;
@@ -11,7 +11,7 @@ type CarDetailsProps = {
   car: CarProps;
 };
 
-const CarDetails: React.FC<CarDetailsProps> = ({ isOpen, closeModal, car }) => (
+const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
   <>
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
