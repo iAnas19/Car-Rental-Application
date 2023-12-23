@@ -63,7 +63,9 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
   url.searchParams.append("modelFamily", model.split(" ")[0]);
   url.searchParams.append("zoomType", "fullscreen");
   url.searchParams.append("modelYear", `${year}`);
-  url.searchParams.append("angle", `${angle}`);
+  angle
+    ? url.searchParams.append("angle", `${angle}`)
+    : url.searchParams.append("angle", "28");
   // if (!url.searchParams.get("paintId")) {
   //   // If not, set the default paintId to "pspc0286"
   //   url.searchParams.append("paintId", "pspc0286");
