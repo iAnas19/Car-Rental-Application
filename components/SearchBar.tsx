@@ -18,7 +18,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   </button>
 );
 
-const Searchbar = () => {
+const SearchBar = () => {
   const [manufacturer, setManuFacturer] = useState<string>("");
   const [model, setModel] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string | null>("");
@@ -94,4 +94,4 @@ const Searchbar = () => {
   );
 };
 
-export default Searchbar;
+export default SearchBar;
